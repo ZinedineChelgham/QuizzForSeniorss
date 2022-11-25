@@ -1,0 +1,22 @@
+@import "variables"
+
+.alert
+  padding: 1rem 2rem
+  width: 100%
+  border-radius: 12px
+  border-style: solid
+  border-width: 2px
+  color: $text
+
+
+  &.info
+    border-color: lighten($main, 20%)
+    background: lighten($main, 30%)
+
+  &.error
+    border-color: lighten($red, 20%)
+    background: lighten($red, 30%)
+
+  &.success
+    border-color: lighten($green, 20%)
+    background: lighten($green, 30%)

@@ -1,0 +1,51 @@
+@import "variables"
+
+.card
+  padding: 12px
+  background: $background-2
+  border-radius: 12px
+  transition: $default-transition
+  box-shadow: $shadow
+  cursor: pointer
+  user-select: none
+  display: block
+
+  .card-image
+    max-width: 100%
+    height: 13.75rem
+    border-radius: 12px
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    margin-bottom: 12px
+
+  .card-text
+    background: $main
+    color: $background-1
+    font-family: $redhatdisplay
+    font-size: 112.5%
+    text-align: center
+    padding: 14px
+    border-radius: 12px
+    overflow-wrap: anywhere
+    flex-direction: column
+    align-items: center
+
+    .quiz-questions
+      font-size: 87.5%
+
+  &.profile
+    .card-image
+      height: 15.5rem
+
+  &.quiz
+    .card-text
+      min-height: 5rem
+
+      .quiz-questions
+        font-size: 75%
+
+
+  &:hover
+    transform: scale(1.05)
+

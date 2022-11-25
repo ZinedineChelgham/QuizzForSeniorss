@@ -1,0 +1,40 @@
+<div class="quiz-play">
+  <h1>{{ quiz.name }}</h1>
+  <div class="quiz-image" style="background-image: url('{{ quiz.image }}')"></div>
+  <hr>
+    <div *ngFor="let question of quiz.questions; let i=index" class="flex">
+      <div class="flex my-2 question" style="align-items: center">
+        <div *ngIf="hasImage(question)" class="col-6">
+          <div class="image" style="background-image: url({{ question.image }})"></div>
+        </div>
+        <div class="col-6">
+          <div class="col-12 center">
+            <h3 class="{{getClass('VISION_SCALE')}}">{{ question.question }} <small>ID#{{ question.id }}</small></h3>
+          </div>
+          <div class="col-12 center">
+            <h3 class="{{getClass('VISION_SCALE')}}">Votre réponse : {{getAnswer(question, i)}}</h3>
+          </div>
+
+          <div *ngIf="isTrue(question, i); else elseBlock" class="col-12 center">
+            <h3 class="{{getClass('VISION_SCALE')}}" style="color: green">Bonne réponse</h3>
+          </div>
+          <ng-template #elseBlock>
+            <div class="col-12 center">
+              <h3 class="{{getClass('VISION_SCALE')}}" style="color: indianred">Mauvaise réponse, la bonne réponse était
+                : {{rightAnswer(question)}}</h3>
+            </div>
+          </ng-template>
+        </div>
+      </div>
+      <hr *ngIf="i < quiz.questions.length - 1">
+    </div>
+
+  <div class="flex">
+    <div class="col-6">
+      <a routerLink="/profile/{{profile.id}}" class="btn-polyquizz block {{getClass('VISION_SCALE')}}">Retour a votre profil</a>
+    </div>
+    <div class="col-6">
+      <a routerLink="/quizzes" class="btn-polyquizz block {{getClass('VISION_SCALE')}}">Retour a la liste des quiz</a>
+    </div>
+  </div>
+</div>
