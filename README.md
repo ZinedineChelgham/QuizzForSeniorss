@@ -1,6 +1,6 @@
 # PolyquizzPs6
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.4.
+Application web permettant d'effectuer des quiz en modifiant l'interface pour l'adapter à divers handicaps 
 
 ## Development server
 
