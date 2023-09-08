@@ -1,4 +1,4 @@
-# PolyquizzPs6
+# QuizzForSeniorss
 
 Application web permettant d'effectuer des quiz en modifiant l'interface pour l'adapter à divers handicaps 
 
